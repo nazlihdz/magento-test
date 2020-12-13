@@ -1,0 +1,28 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Nazli_TestPack::orders_menu"
+            title="Bayonet Anti-Fraud"
+            translate="title"
+            module="Nazli_TestPack"
+            sortOrder="20"
+            resource="Nazli_TestPack::orders_menu"
+        />
+        <add
+            id="Nazli_TestPack::bayonet_orders"
+            title="Orders Processed by Bayonet"
+            translate="title" module="Nazli_TestPack"
+            sortOrder="10" resource="Nazli_TestPack::bayonet_orders"
+            parent="Nazli_TestPack::orders_menu"
+            action="Nazli_TestPack/bayonetorder/index"
+        />
+        <add
+            id="Nazli_TestPack::bayonet_blocklist"
+            title="Blocklist/Whitelist"
+            translate="title" module="Nazli_TestPack"
+            sortOrder="10" resource="Nazli_TestPack::bayonet_blocklist"
+            parent="Nazli_TestPack::orders_menu"
+            action="Nazli_TestPack/bayonetblocklist/index"
+        />
+    </menu>
+</config>
